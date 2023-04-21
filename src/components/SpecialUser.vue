@@ -11,13 +11,8 @@
                 special_username: undefined
             }
         },
-        methods: {
-            handle_user_clicked: function(username) {
-                this.special_username = username;
-            }
-        },
         mounted () {
-            this.$root.$on(`user_clicked`, this.handle_user_clicked);
+            this.$root.$on(`user_clicked`, username =>  this.special_username = username );
         },
     }
 </script>
